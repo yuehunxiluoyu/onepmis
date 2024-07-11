@@ -1,0 +1,26 @@
+server:
+  port: 8066
+  tomcat:
+    uri-encoding: UTF-8
+    max-connections: 20000
+    threads:
+      max: 10000
+    accept-count: 10000
+spring:
+  ai:
+    ollama:
+      base-url: http://116.204.106.41:11434
+      chat:
+        options:
+          model: tocAI:0.8
+    openai:
+      api-key: ollama
+      base-url: http://116.204.106.41:11434/v1
+      chat:
+        options:
+          model: tocAI:0.8
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+  
